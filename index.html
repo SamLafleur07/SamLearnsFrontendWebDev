@@ -1,17 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sam Learns Frontend Web Dev</title>
+    <title>Basic Math Skills</title>
   </head>
   <body>
-    <!-- Write HTMl HEere -->
-     <h1>heres some html</h1>
+    <h1>Try Math with Two Numbers</h1>
+
+    <label>
+      Number A:
+      <input id="a" type="number" /> </label
+    ><br />
+
+    <label>
+      Number B:
+      <input id="b" type="number" /> </label
+    ><br />
+
+    <button onclick="doMath()">Run Math</button>
+
+    <p>Add: <span id="sum">?</span></p>
+    <p>Multiply: <span id="product">?</span></p>
+    <p>Divide: <span id="quotient">?</span></p>
+
     <script>
-        //write javascript (logic) here
-        console.log("heres some javascript ")
+      function doMath() {
+        const a = Number(document.getElementById("a").value);
+        const b = Number(document.getElementById("b").value);
+
+        // Basic operations
+        const sum = a + b;
+        const product = a * b;
+        const quotient = b !== 0 ? a / b : "Cannot divide by zero";
+
+        // Display results
+        document.getElementById("sum").textContent = sum;
+        document.getElementById("product").textContent = product;
+        document.getElementById("quotient").textContent = quotient;
+      }
     </script>
   </body>
 </html>
-
